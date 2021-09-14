@@ -255,10 +255,10 @@
         13 >>> print mc.__dict__
         14 {'_MyClass__superprivate': 'Hello', '_semiprivate': ', world!'}
         ```
+        _foo:表示这是一个保护成员，只有类对象和子类对象自己能访问到这些变量。以单下划线开头的变量和函数被默认当作是内部函数，使用from module improt *时不会被获取，但是使用import module可以获取
+        foo_:仅仅是为了区别该名称与关键词
+        __foo:表示为私有成员，只允许类本身访问，子类也不行。在文本上被替换为_class__method
         __foo__:一种约定,Python内部的名字,用来区别其他用户自定义的命名,以防冲突.
-        -foo:一种约定,用来指定变量私有.程序员用来指定私有变量的一种方式.
-        -foo:这个有真正的意义:解析器用_classname__foo来代替这个名字,以区别和其他类相同的命名.
-        详情见:
         http://www.zhihu.com/question/19754941
 
         #### 8 字符串格式化:%和.format
